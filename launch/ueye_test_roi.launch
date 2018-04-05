@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<launch>
+
+  <include file="$(find img_roi)/launch/img_roi.launch" />
+
+  <node pkg="rovio" type="rovio_node" name="rovio" output="screen">
+    <param name="filter_config" type="string" value="$(find rovio)/cfg/rovio_ueye.info"/>
+    <param name="camera0_config" type="string" value="$(find rovio)/cfg/ueye_roi_equidist.yaml"/>
+    <remap from="cam0/image_raw" to="img_roi" />
+    <remap from="imu0" to="imu/data_raw" />
+  </node>
+
+  <node name="rvizvisualisation" pkg="rviz" type="rviz" output="log" args="-d $(find rovio)/rviz_config.rviz" />
+
+</launch>

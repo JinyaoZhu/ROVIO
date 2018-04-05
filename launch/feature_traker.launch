@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<launch>
+
+  <include file="$(find img_roi)/launch/img_roi.launch" />
+
+  <node name="phidgets_imu_node" pkg="phidgets_imu" type="phidgets_imu_node" >
+	  <param name="period" value="4"/>
+  </node>
+
+  <node name="camera" pkg="ueye" type="camera">
+	  <param name="frame_rate" value="20"/>
+	  <param name="auto_exposure" value="false"/>
+    <param name="auto_gain" value="true"/>
+    <param name="exposure_time" value="15"/>
+  </node>
+
+  <node pkg="rovio" type="feature_tracker_node" name="feature_tracker" output="screen">
+  
+    <param name="filter_config" type="string" value="$(find rovio)/cfg/rovio_ueye.info"/>
+    <param name="camera0_config" type="string" value="$(find rovio)/cfg/ueye_roi_equidist.yaml"/>
+
+    <remap from="/cam0/image_raw" to="/img_roi" />
+    <remap from="/imuMeas" to="/imu/data_raw" />
+
+  </node>
+
+</launch>

@@ -1,0 +1,63 @@
+image_width: 533	
+image_height: 365
+camera_name: cam0
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [2.6021207489537841e+02, 0.0, 2.5856445256626415e+02,
+         0.0,2.5875900759637477e+02,1.7192253845210769e+02,
+         0.0, 0.0, 1.0]
+distortion_model: equidistant
+
+distortion_coefficients:
+  rows: 1
+  cols: 4
+  data:  [-6.9710475154489651e-02, 7.7447050356013430e-02,-6.1858222522151604e-02,1.4250652783956935e-02]
+
+# model_type: KANNALA_BRANDT
+# camera_name: ueye_roi
+# image_width: 533
+# image_height: 365
+# projection_parameters:
+#    k2: -6.9710475154489651e-02
+#    k3: 7.7447050356013430e-02
+#    k4: -6.1858222522151604e-02
+#    k5: 1.4250652783956935e-02
+#    mu: 2.6021207489537841e+02
+#    mv: 2.5875900759637477e+02
+#    u0: 2.5856445256626415e+02
+#    v0: 1.7192253845210769e+02
+
+# image_width: 533
+# image_height: 365
+# camera_name: cam0
+# camera_matrix:
+#   rows: 3
+#   cols: 3
+#   data: [2.5905742329129527e+02, 0.0, 2.5900483788682493e+02, 0.0,2.5781228217587761e+02, 1.7280566255171334e+02, 0.0, 0.0, 1.0]
+# distortion_model: plumb_bob
+# distortion_coefficients:
+#   rows: 1
+#   cols: 5
+#   data:  [-2.8750671537406181e-01,  6.1820963847497835e-02,-6.7607398515321597e-04, 2.5534115068336419e-04, 0.0]
+
+# model_type: PINHOLE
+# camera_name: ueye_roi
+# image_width: 533
+# image_height: 365
+# distortion_parameters:
+#    k1: -2.8750671537406181e-01
+#    k2: 6.1820963847497835e-02
+#    p1: -6.7607398515321597e-04
+#    p2: 2.5534115068336419e-04
+# projection_parameters:
+#    fx: 2.5905742329129527e+02
+#    fy: 2.5781228217587761e+02
+#    cx: 2.5900483788682493e+02
+#    cy: 1.7280566255171334e+02
+
+
+
+
+
+
